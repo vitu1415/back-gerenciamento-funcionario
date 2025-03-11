@@ -5,25 +5,25 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.ract.testreact.entity.ReactEntity;
-import com.ract.testreact.repository.ReactRepository;
+import com.ract.testreact.entity.Funcionario;
+import com.ract.testreact.repository.FuncionarioRepository;
 
 @Service
-public class ReactService {
+public class FuncionarioService {
 	
 	@Autowired
-	private ReactRepository repository;
+	private FuncionarioRepository repository;
 	
-	public List<ReactEntity> findAll() {
+	public List<Funcionario> findAll() {
 		return repository.findAll();
 	}
 	
-	public ReactEntity findById(Long id) {
+	public Funcionario findById(Long id) {
 		return repository.findById(id)
 				.orElse(null);
 	}
 	
-	public ReactEntity save(ReactEntity te) {
+	public Funcionario save(Funcionario te) {
 		return repository.save(te);
 	}
 		

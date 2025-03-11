@@ -3,9 +3,9 @@ package com.ract.testreact.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.ract.testreact.entity.ReactEntity;
+import com.ract.testreact.entity.Funcionario;
 
 @Repository
-public interface ReactRepository extends JpaRepository<ReactEntity, Long>{
+public interface FuncionarioRepository extends JpaRepository<Funcionario, Long>{
 
 }
