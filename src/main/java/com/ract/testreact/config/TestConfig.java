@@ -21,8 +21,7 @@ public class TestConfig implements CommandLineRunner, WebMvcConfigurer {
 	@Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**") // Permite CORS em todas as rotas
-                .allowedOrigins("http://localhost:3000",
-						"https://listsfuncionario.vercel.app") // Substitua pela sua origem
+                .allowedOrigins("https://listsfuncionario.vercel.app") // Substitua pela sua origem
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Métodos permitidos
                 .allowedHeaders("*"); // Todos os cabeçalhos são permitidos
     }
