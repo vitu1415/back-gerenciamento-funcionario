@@ -19,18 +19,18 @@ import com.ract.testreact.entity.Funcionario;
 public class TestConfig implements CommandLineRunner, WebMvcConfigurer {
 
 	@Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**") // Permite CORS em todas as rotas
-                .allowedOrigins("https://listsfuncionario.vercel.app") // Substitua pela sua origem
-                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Métodos permitidos
-                .allowedHeaders("*"); // Todos os cabeçalhos são permitidos
-    }
+	public void addCorsMappings(CorsRegistry registry) {
+		registry.addMapping("/**") // Permite CORS em todas as rotas
+				.allowedOrigins("http://localhost:3000", "https://listsfuncionario.vercel.app") // Substitua pela sua origem
+				.allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Métodos permitidos
+				.allowedHeaders("*"); // Todos os cabeçalhos são permitidos
+	}
 
 	@Autowired
 	private com.ract.testreact.repository.FuncionarioRepository FuncionarioRepository;
 	@Autowired
 	private EquipeRepository EquipeRepository;
-	
+
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
@@ -41,5 +41,5 @@ public class TestConfig implements CommandLineRunner, WebMvcConfigurer {
 
 		FuncionarioRepository.saveAll(Arrays.asList(re1, re2));
 	}
-	
+
 }
