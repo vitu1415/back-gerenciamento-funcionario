@@ -30,4 +30,8 @@ public class FuncionarioService {
 	public void deleteById(Long id) {
 		repository.deleteById(id);
 	}
+
+	public List<Funcionario> findByUserToken(String userToken) {
+		return repository.findByUserToken(userToken);
+	}
 }

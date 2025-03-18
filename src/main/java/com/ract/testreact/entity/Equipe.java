@@ -26,6 +26,7 @@ public class Equipe {
     @JsonIgnore
     private List<Funcionario> funcionarios = new ArrayList<>();
 
+    private String userToken;
 
     public void atualizarInformacoes(DadosEquipePut dados) {
         if(dados.nome() != null) {

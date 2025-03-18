@@ -34,10 +34,10 @@ public class TestConfig implements CommandLineRunner, WebMvcConfigurer {
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
-		Equipe equipe1 = new Equipe(null, "flash", "melhor equipe", new ArrayList<>());
+		Equipe equipe1 = new Equipe(null, "flash", "melhor equipe", new ArrayList<>(), "1");
 		equipe1 = EquipeRepository.save(equipe1);
-		Funcionario re1 = new Funcionario(null, "Vitor Alves", "vitor@teste.com", equipe1);
-		Funcionario re2 = new Funcionario(null, "Joao", "joao@teste.com", equipe1);
+		Funcionario re1 = new Funcionario(null, "Vitor Alves", "vitor@teste.com", equipe1, "1");
+		Funcionario re2 = new Funcionario(null, "Joao", "joao@teste.com", equipe1, "1");
 
 		FuncionarioRepository.saveAll(Arrays.asList(re1, re2));
 	}

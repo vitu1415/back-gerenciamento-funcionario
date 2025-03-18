@@ -31,4 +31,8 @@ public class EquipeService {
         }
         repository.delete(equipe);
     }
+
+    public List<Equipe> findByUserToken(String userToken) {
+        return repository.findByUserToken(userToken);
+    }
 }

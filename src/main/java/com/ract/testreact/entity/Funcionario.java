@@ -28,6 +28,8 @@ public class Funcionario {
 	@JoinColumn(name = "equipe_id")
 	private Equipe equipe;
 
+	private String userToken;
+
 	public void atualizarInformcoes(DadosFuncionarioPut dados) {
 		if(dados.nome() != null) {
 			this.nome = dados.nome();
